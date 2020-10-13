@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>این یک آزمایش است</title>
+<style>
+  #allcontents{
+    display:flex;
+    flex-flow:column wrap;
+  }
+  nav {
+    display:flex;
+    flex-flow:column;
+  }
+  nav > ul {
+    display: flex;
+    justify-content:space-between;;
+  }
+  nav > ul > #login {
+  }  
+  #library{
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .a1{
+    display: flex;
+    /*flex-flow: column;*/
+    background-color:black;
+  }
+  .a1:nth-child(1) {
+    order: 3;
+    background-color:blue;
+  }
+  .a1:nth-child(2) {
+    order: 1;
+    background-color:yellow;
+  }
+  .a1:nth-child(3) {
+      order: 2;
+  }
+  .library > img {
+    order: -1;
+    align-self: center;
+  }
+  .library > button {
+    margin-top: auto;
+  }
+  .g1 > div:nth-child(2) {
+    order: 1;
+    background-color:yellow;
+  }
+  .g1 > div:nth-child(1) {
+    order: 2;
+    background-color:blue;
+  }
+  .g1 > div:nth-child(3) {
+    order: 3;
+    background-color:red;
+  }
+
+</style>
+</head>
+<body>
+  <div id="allcontents">
+<nav>
+<ul>
+  <li><a href=/about>About</a>
+  <li><a href=/projects>Projects</a>
+  <li><a href=/interact>Interact</a>
+  <li id='login'><a href=/login>Login</a>
+</ul>
+</nav>
+<div id="library">
+  <div class="a1">
+    a1
+  </div>
+  <div class="a1">
+    a2
+  </div>
+  <div class="a1">
+    a3
+  </div>
+  <img src="Loginbg.jpg" width="250px" />
+  <button>dd</button>
+</div>
+<div class="g1">
+  <div>
+    g1
+  </div>
+  <div>
+    g2
+  </div>
+  <div>
+    g3
+  </div>
+</div>
+</div>
+</body>
+</html> 

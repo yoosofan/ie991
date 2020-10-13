@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>این یک آزمایش است</title>
+<style>
+  #allcontents{
+    position:relative;
+    display:flex;
+    flex-flow: row wrap;
+    align-content:space-between;
+  }
+  #a1{
+    display:flex;
+    flex-flow:column nowrap;
+    align-content:space-between;
+    width:70%;
+    height:100%;
+    min-height:500px;
+    background-color:yellow;
+  }
+  #a1 >div{
+    align-content:flex-end;
+    min-height:100px;
+  }
+  #a2{
+    display:flex;
+    flex-flow:column;
+    width:30%;
+    height:100%;
+    min-height:500px;
+    background-color:red;
+  }
+
+</style>
+</head>
+<body>
+<div id="allcontents">
+  <div id="a1">
+    <div>
+      aa
+    </div>  
+    <div>
+            content1
+    </div>
+    <div>aa
+    </div>
+  </div>
+  <div id="a2">a2</div>
+</div>
+</body>
+</html> 
