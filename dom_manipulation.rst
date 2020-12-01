@@ -124,6 +124,9 @@ GET ELEMENTS BY TAG NAME
     li[i].style.backgroundColor = '#f4f4f4';
   }
 
+* text1
+* text2 
+
 ----
 
 QUERY SELECTOR
