@@ -52,9 +52,9 @@ EXAMINE DOCUMENT OBJECT
   <form action="#" id="form1">
     <label for="fname">First name:</label>
     <input type="text" id="fname" name="fname">
-    <input type="submit" value="Submit">
     <label for="lname">Last name:</label>
     <input type="text" id="lname" name="lname" form="form1">
+    <input type="submit" value="Submit">
   </form>
 
 
@@ -63,9 +63,9 @@ EXAMINE DOCUMENT OBJECT
   <form action="#" id="form1">
     <label for="fname">First name:</label>
     <input type="text" id="fname" name="fname">
-    <input type="submit" value="Submit">
     <label for="lname">Last name:</label>
     <input type="text" id="lname" name="lname" form="form1">
+    <input type="submit" value="Submit">
   </form>
 
 ----
