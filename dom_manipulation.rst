@@ -49,7 +49,7 @@ EXAMINE DOCUMENT OBJECT
 
 .. code:: html
 
-  <form action="/action_page.php" id="form1">
+  <form action="#" id="form1">
     <label for="fname">First name:</label>
     <input type="text" id="fname" name="fname">
     <input type="submit" value="Submit">
@@ -60,7 +60,7 @@ EXAMINE DOCUMENT OBJECT
 
 .. raw:: html
 
-  <form action="/action_page.php" id="form1">
+  <form action="#" id="form1">
     <label for="fname">First name:</label>
     <input type="text" id="fname" name="fname">
     <input type="submit" value="Submit">
