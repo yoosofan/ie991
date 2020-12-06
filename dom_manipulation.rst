@@ -75,8 +75,8 @@ GET ELEMENT BY ID
 .. code:: javascript
 
   console.log(document.getElementById('header-title'));
-  var headerTitle = document.getElementById('header-title');
-  var header = document.getElementById('main-header');
+  let headerTitle = document.getElementById('header-title');
+  let header = document.getElementById('main-header');
   console.log(headerTitle);
   headerTitle.textContent = 'Hello';
   headerTitle.innerText = 'Goodbye';
@@ -90,7 +90,7 @@ GET ELEMENTS BY CLASS NAME
 
 .. code:: javascript
 
-  var items = document.getElementsByClassName('list-group-item');
+  let items = document.getElementsByClassName('list-group-item');
   console.log(items);
   console.log(items[1]);
   items[1].textContent = 'Hello 2';
@@ -100,7 +100,7 @@ GET ELEMENTS BY CLASS NAME
   // Gives error
   //items.style.backgroundColor = '#f4f4f4';
 
-  for(var i = 0; i < items.length; i++){
+  for(let i = 0; i < items.length; i++){
     items[i].style.backgroundColor = '#f4f4f4';
   }
 
@@ -110,7 +110,7 @@ GET ELEMENTS BY TAG NAME
 
 .. code:: javascript
 
-  var li = document.getElementsByTagName('li');
+  let li = document.getElementsByTagName('li');
   console.log(li);
   console.log(li[1]);
   li[1].textContent = 'Hello 2';
@@ -120,7 +120,7 @@ GET ELEMENTS BY TAG NAME
   // Gives error
   //items.style.backgroundColor = '#f4f4f4';
 
-  for(var i = 0; i < li.length; i++){
+  for(let i = 0; i < li.length; i++){
     li[i].style.backgroundColor = '#f4f4f4';
   }
 
@@ -152,12 +152,12 @@ QUERY SELECTOR ALL
 
 .. code:: javascript
 
-  var titles = document.querySelectorAll('.title');
+  let titles = document.querySelectorAll('.title');
   console.log(titles);
   titles[0].textContent = 'Hello';
-  var odd = document.querySelectorAll('li:nth-child(odd)');
-  var even= document.querySelectorAll('li:nth-child(even)');
-  for(var i = 0; i < odd.length; i++){
+  let odd = document.querySelectorAll('li:nth-child(odd)');
+  let even= document.querySelectorAll('li:nth-child(even)');
+  for(let i = 0; i < odd.length; i++){
     odd[i].style.backgroundColor = '#f4f4f4';
     even[i].style.backgroundColor = '#ccc';
   }
@@ -216,7 +216,7 @@ Create Element
 .. code:: javascript
 
   // Create a div
-  var newDiv =  document.createElement('div');
+  let newDiv =  document.createElement('div');
   // Add class
   newDiv.className= 'hello';
   // Add id
@@ -224,7 +224,7 @@ Create Element
   // Add attr
   newDiv.setAttribute('title', 'Hello Div');
   // Create text node
-  var newDivText = document.createTextNode('Hello World');
+  let newDivText = document.createTextNode('Hello World');
   // Add text to div
   newDiv.appendChild(newDivText);
   var container = document.querySelector('header .container');
