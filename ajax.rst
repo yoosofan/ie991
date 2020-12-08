@@ -225,6 +225,91 @@ Json vs XML
 
 ----
 
+JSON for table
+=================
+
+.. code:: javascript
+    :number-lines:
+
+    obj = { table: "customers", limit: 20 };
+    dbParam = JSON.stringify(obj);
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        myObj = JSON.parse(this.responseText);
+        txt += "<table border='1'>"
+        for (x in myObj) {
+          txt += "<tr><td>" + myObj[x].name + "</td></tr>";
+        }
+        txt += "</table>"
+        document.getElementById("demo").innerHTML = txt;
+      }
+    }
+    xmlhttp.open("POST", "json_demo_db_post.php", true);
+    xmlhttp.setRequestHeader("Content-type", 
+        "application/x-www-form-urlencoded");
+    xmlhttp.send("x=" + dbParam); 
+
+----
+
+PostgreSQL
+===================
+.. code:: sql
+    :number-lines:
+
+    select json_build_object( 'name ', name) 
+    from customer  limit 20;
+
+.. code:: python
+    :number-lines:
+
+    qs ="select json_build_object( 'name ', name) "
+    qs+=" from " + table_name + "limit " 
+    qs+= record_limit + ";"
+    res= await self.db.q(qs,'a')
+    self.write(tornado.escape.json_encode(res))
+
+----
+
+.. code:: javascript
+    :number-lines:
+
+    //Create the XHR Object
+    const xhr = new XMLHttpRequest;
+    //Call the open function, GET-type of request, url, true-asynchronous
+    xhr.open('GET', 'https://api.github.com/users', true)
+    //call the onload 
+    xhr.onload = function() 
+        {
+            //check if the status is 200(means everything is okay)
+            if (this.status === 200) 
+                {
+                    //return server response as an object with JSON.parse
+                    console.log(JSON.parse(this.responseText));
+        }
+                }
+    //call send
+    xhr.send();
+    //Common Types of HTTP Statuses
+    // 200: OK
+    // 404: ERROR
+    // 403: FORBIDDEN
+
+----
+
+----
+
+Using fetch
+==================
+.. code:: javascript
+    :number-lines:
+
+    fetch('https://api.github.com/users')
+    .then(res => res.json())//response type
+    .then(data => console.log(data)); //log the data;
+
+----
+
 .. code:: javascript 
     :number-lines:
 
