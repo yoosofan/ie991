@@ -104,9 +104,6 @@ var x = document.querySelectorAll("p");
 // Set the background color of the first <p> element
 x[0].style.backgroundColor = "red"; 
 
-
-
-
 // Get all <p> elements in the document with class="example"
 var x = document.querySelectorAll("p.example");
 
@@ -147,8 +144,6 @@ var i;
 for (i = 0; i < x.length; i++) {
     x[i].style.backgroundColor = "red";
 } 
-
-
 
 
 <div id="foo\bar"></div>

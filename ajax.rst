@@ -22,7 +22,22 @@ Ahmad Yoosofan
 
 University of Kashan
 
-Spring 2020
+Fall 2020
+
+----
+
+Ajax
+===================================================
+Single Page Application (SPA)
+--------------------------------
+* Send and receive part of html
+* Send and receive Json
+
+cons
+-------
+Search Enginges cannot index website 
+
+Search Engine Optimization(SEO)
 
 ----
 
@@ -70,7 +85,6 @@ Fetch (I)
   
 ----
 
-
 .. code:: javascript 
     :number-lines:
 
@@ -93,6 +107,121 @@ Fetch (I)
       __proto__ : Response
     }
 
+
+----
+
+History
+============
+JSON grew out of a need for stateless, real-time server-to-browser communication protocol without using browser plugins such as Flash or Java applets, the dominant methods used in the early 2000s.
+
+----
+
+JSON Values
+=================
+.. class:: substep
+
+    *   a string
+    *   a number
+    *   an object (JSON object)
+    *   an array
+    *   a boolean
+    *   null
+
+----
+
+Sample
+========
+.. code:: javascript
+    :number-lines:
+
+    {
+      "array": [
+        1,
+        2,
+        3
+      ],
+      "boolean": true,
+      "color": "#82b92c",
+      "null": null,
+      "number": 123,
+      "object": {
+        "a": "b",
+        "c": "d",
+        "e": "f"
+      },
+      "string": "Hello World"
+    }
+
+----
+
+convert javascript to json
+====================================
+
+.. code:: javascript
+    :number-lines:
+
+    var myObj = {name: "John", age: 31, city: "New York"};
+    var myJSON = JSON.stringify(myObj);
+    window.location = "demo_json.php?x=" + myJSON;
+
+----
+
+convert json to javascript
+============================
+
+.. code:: javascript
+    :number-lines:
+
+    var myJSON = '{"name":"John", "age":31, "city":"New York"}';
+    var myObj = JSON.parse(myJSON);
+    document.getElementById("demo").innerHTML = myObj.name; 
+
+----
+
+storing json
+=============
+
+.. code:: javascript
+    :number-lines:
+
+    // Storing data:
+    myObj = {name: "John", age: 31, city: "New York"};
+    myJSON = JSON.stringify(myObj);
+    localStorage.setItem("testJSON", myJSON);
+
+    // Retrieving data:
+    text = localStorage.getItem("testJSON");
+    obj = JSON.parse(text);
+    document.getElementById("demo").innerHTML = obj.name; 
+
+----
+
+Json vs XML
+=============
+.. code:: javascript
+    :number-lines:
+
+    {"employees":[
+      { "firstName":"John", "lastName":"Doe" },
+      { "firstName":"Anna", "lastName":"Smith" },
+      { "firstName":"Peter", "lastName":"Jones" }
+    ]}
+
+
+.. code:: xml
+    :number-lines:
+
+    <employees>
+      <employee>
+        <firstName>John</firstName> <lastName>Doe</lastName>
+      </employee>
+      <employee>
+        <firstName>Anna</firstName> <lastName>Smith</lastName>
+      </employee>
+      <employee>
+        <firstName>Peter</firstName> <lastName>Jones</lastName>
+      </employee>
+    </employees>
 
 ----
 

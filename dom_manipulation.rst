@@ -18,11 +18,9 @@ DOM
 
 Ahmad Yoosofan
 
-
 ----
 
 .. image:: img/javascript/800px-DOM-model.svg.png
-
 
 `wikipedia <https://en.wikipedia.org/wiki/Document_Object_Model>`_
 
@@ -326,12 +324,16 @@ addEventListener(III)
 
 ----
 
+References
+=============
+* https://www.javatpoint.com/html-form-input-types
+* https://www.youtube.com/watch?v=xvqsFTUsOmc
+* https://www.traversymedia.com/
+* https://www.youtube.com/watch?v=0ik6X4DJKCc&t=285s
+* https://codepen.io/bradtraversy/pen/Bwapow
+
+----
+
 END
 ========
-
-.. :
-
-  References
-  =============
-  * https://www.javatpoint.com/html-form-input-types
 

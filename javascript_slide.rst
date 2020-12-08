@@ -56,26 +56,8 @@ JSON Values
 
 ----
 
-
 JSON Values
 =================
-
-.. class:: substep
-
-    *   a string
-
-        *   a number
-
-        *   an object (JSON object)
-
-        *   an array
-
-        *   a boolean
-
-        *   null
-
-----
-
 .. class:: substep
 
     *   a string
@@ -91,22 +73,6 @@ JSON Values
     *   null
 
 ----
-
-.. class:: substep
-
-    sf
-    
-    sggg
-    
-    3w4
-    
-    sf
-    
-    
-    
-
-----
-
 
 Sample
 ========
