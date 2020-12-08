@@ -160,8 +160,8 @@ convert javascript to json
 .. code:: javascript
     :number-lines:
 
-    var myObj = {name: "John", age: 31, city: "New York"};
-    var myJSON = JSON.stringify(myObj);
+    let myObj = {name: "John", age: 31, city: "New York"};
+    let myJSON = JSON.stringify(myObj);
     window.location = "demo_json.php?x=" + myJSON;
 
 ----
@@ -172,8 +172,8 @@ convert json to javascript
 .. code:: javascript
     :number-lines:
 
-    var myJSON = '{"name":"John", "age":31, "city":"New York"}';
-    var myObj = JSON.parse(myJSON);
+    let myJSON = '{"name":"John", "age":31, "city":"New York"}';
+    let myObj = JSON.parse(myJSON);
     document.getElementById("demo").innerHTML = myObj.name; 
 
 ----
@@ -924,9 +924,9 @@ Using fetch
 .. code:: javascript
     :number-lines:
 
-      var myArticle = document.querySelector('article');
-      var myLinks = document.querySelectorAll('ul a');
-      for(var i = 0; i <= myLinks.length - 1; i++) {
+      let myArticle = document.querySelector('article');
+      let myLinks = document.querySelectorAll('ul a');
+      for(let i = 0; i <= myLinks.length - 1; i++) {
         myLinks[i].onclick = function(e) {
           e.preventDefault();  var linkData = e.target.getAttribute('data-page');
           getData(linkData);
