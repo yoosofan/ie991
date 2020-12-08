@@ -29,7 +29,7 @@ Ahmad Yoosofan
 ----
 
 EXAMINE DOCUMENT OBJECT
-
+=============================
 .. code:: javascript
 
   console.dir(document);
@@ -71,7 +71,7 @@ EXAMINE DOCUMENT OBJECT
 ----
 
 GET ELEMENT BY ID
-
+==========================
 .. code:: javascript
 
   console.log(document.getElementById('header-title'));
@@ -87,7 +87,7 @@ GET ELEMENT BY ID
 ----
 
 GET ELEMENTS BY CLASS NAME
-
+=================================
 .. code:: javascript
 
   let items = document.getElementsByClassName('list-group-item');
@@ -107,7 +107,7 @@ GET ELEMENTS BY CLASS NAME
 ----
 
 GET ELEMENTS BY TAG NAME
-
+===============================
 .. code:: javascript
 
   let li = document.getElementsByTagName('li');
@@ -130,7 +130,7 @@ GET ELEMENTS BY TAG NAME
 ----
 
 QUERY SELECTOR
-
+===================
 .. code:: javascript
 
   let header = document.querySelector('#main-header');
@@ -149,7 +149,7 @@ QUERY SELECTOR
 ----
 
 QUERY SELECTOR ALL
-
+=========================
 .. code:: javascript
 
   let titles = document.querySelectorAll('.title');
@@ -165,7 +165,7 @@ QUERY SELECTOR ALL
 ----
 
 TRAVERSING DOM
-
+===================
 .. code:: javascript
   
   let itemList = document.querySelector('#items');
@@ -188,6 +188,8 @@ TRAVERSING DOM
 
 ----
 
+Child
+============
 .. code:: javascript
 
   // FirstChild
@@ -212,7 +214,7 @@ TRAVERSING DOM
 ----
 
 Create Element
-
+====================
 .. code:: javascript
 
   // Create a div
@@ -227,8 +229,8 @@ Create Element
   let newDivText = document.createTextNode('Hello World');
   // Add text to div
   newDiv.appendChild(newDivText);
-  var container = document.querySelector('header .container');
-  var h1 = document.querySelector('header h1');
+  let container = document.querySelector('header .container');
+  let h1 = document.querySelector('header h1');
   console.log(newDiv);
   newDiv.style.fontSize = '30px';
   container.insertBefore(newDiv, h1);
@@ -236,10 +238,10 @@ Create Element
 ----
 
 EVENTS
-
+============
 .. code:: javascript
 
-  var button = document.getElementById('button').
+  let button = document.getElementById('button').
     addEventListener('click', buttonClick);
   function buttonClick(e){
     console.log('Button clicked');
@@ -250,7 +252,7 @@ EVENTS
     console.log(e.target.id);
     console.log(e.target.className);
     console.log(e.target.classList);
-    var output = document.getElementById('output');
+    let output = document.getElementById('output');
     output.innerHTML = '<h3>'+e.target.id+'</h3>';
     console.log(e.type);
     console.log(e.clientX);
@@ -264,10 +266,12 @@ EVENTS
 
 ----
 
+addEventListener(I)
+=========================
 .. code:: javascript
 
-  var button = document.getElementById('button');
-  var box = document.getElementById('box');
+  let button = document.getElementById('button');
+  let box = document.getElementById('box');
 
   button.addEventListener('click', runEvent);
   button.addEventListener('dblclick', runEvent);
@@ -281,11 +285,13 @@ EVENTS
 
 ----
 
+addEventListener(II)
+===========================
 .. code:: javascript
 
-  var itemInput = document.querySelector('input[type="text"]');
-  var form = document.querySelector('form');
-  var select = document.querySelector('select');
+  let itemInput = document.querySelector('input[type="text"]');
+  let form = document.querySelector('form');
+  let select = document.querySelector('select');
   itemInput.addEventListener('keydown', runEvent);
   itemInput.addEventListener('keyup', runEvent);
   itemInput.addEventListener('keypress', runEvent);
@@ -298,6 +304,9 @@ EVENTS
   select.addEventListener('input', runEvent);
 
 ----
+
+addEventListener(III)
+=====================
 
 .. code:: javascript
 
@@ -318,6 +327,7 @@ EVENTS
 ----
 
 END
+========
 
 .. :
 
