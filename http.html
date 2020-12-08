@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
+<title>مروری بر روند http</title>
+<meta content="fa" http-equiv="Content-Language" />
+<style type="text/css">
+
+/* Use these two if the main document direction is RTL */
+body { direction: rtl; text-align:justify;    font-family:'Nazli', Geneva, sans-serif; font-size: 1.1em;}
+div.sidebar { float: left !important; }
+
+/* The next 3 rules are very useful in documents containing pieces
+of code in english */
+/* Use this if you all your literal blocks (::) are LTR */
+pre {direction: ltr; unicode-bidi: embed; }
+/* Use this if you all your inline literals (``) are LTR */
+tt {direction: ltr; unicode-bidi: embed; }
+/* Use this if you all your interpretted text (`) is LTR */
+cite {direction: ltr; unicode-bidi: embed; }
+
+/* Allow manual direction override by class directive and roles */
+.rtl { direction: rtl; }
+.ltr { direction: ltr; }
+.center {text-align: center;}
+.toc-backref {     font-size: 1em;}
+.section h1{    font-size: 1.3em;}
+.section h2{    font-size: 1.3em;}
+
+</style>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7952 2016-07-26 18:15:59Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="http">
+<h1 class="title">مروری بر روند http</h1>
+
+<div class="section" id="id1">
+<h1>1&nbsp;&nbsp;&nbsp;درخواست</h1>
+<div class="section" id="url">
+<h2>1.1&nbsp;&nbsp;&nbsp;نشانی URL</h2>
+<img alt="img/http1-url-structure.png" class="align-center" src="img/http1-url-structure.png" />
+</div>
+<div class="section" id="id2">
+<h2>1.2&nbsp;&nbsp;&nbsp;دستورهای مهم</h2>
+<ul class="ltr simple">
+<li>GET: fetch an existing resource. The URL contains all the necessary information the server needs to locate and return the resource.</li>
+<li>POST: create a new resource. POST requests usually carry a payload that specifies the data for the new resource.</li>
+<li>PUT: update an existing resource. The payload may contain the updated data for the resource.</li>
+<li>DELETE: delete an existing resource.</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>1.3&nbsp;&nbsp;&nbsp;برخی دستورهای دیگر</h2>
+<ul class="ltr simple">
+<li>HEAD: this is similar to GET, but without the message body. It's used to retrieve the server headers for a particular resource, generally to check if the resource has changed, via timestamps.</li>
+<li>TRACE: used to retrieve the hops that a request takes to round trip from the server. Each intermediate proxy or gateway would inject its IP or DNS name into the Via header field. This can be used for diagnostic purposes.</li>
+<li>OPTIONS: used to retrieve the server capabilities. On the client-side, it can be used to modify the request based on what the server can support.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id4">
+<h1>2&nbsp;&nbsp;&nbsp;انواع پیام‌های پاسخ</h1>
+<div class="section" id="xx-informational-messages">
+<h2>2.1&nbsp;&nbsp;&nbsp;1xx: Informational Messages</h2>
+<p>All HTTP/1.1 clients are required to accept the Transfer-Encoding header.</p>
+</div>
+<div class="section" id="xx-successful">
+<h2>2.2&nbsp;&nbsp;&nbsp;2xx: Successful</h2>
+<blockquote>
+<ul class="simple">
+<li>202 Accepted: the request was accepted but may not include the resource in the response. This is useful for async processing on the server side. The server may choose to send information for monitoring.</li>
+<li>204 No Content: there is no message body in the response.</li>
+<li>205 Reset Content: indicates to the client to reset its document view.</li>
+<li>206 Partial Content: indicates that the response only contains partial content. Additional headers indicate the exact range and content expiration information.</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="xx-redirection">
+<h2>2.3&nbsp;&nbsp;&nbsp;3xx: Redirection</h2>
+<blockquote>
+<ul class="simple">
+<li>301 Moved Permanently: the resource is now located at a new URL.</li>
+<li>303 See Other: the resource is temporarily located at a new URL. The Location response header contains the temporary URL.</li>
+<li>304 Not Modified: the server has determined that the resource has not changed and the client should use its cached copy. This relies on the fact that the client is sending ETag (Enttity Tag) information that is a hash of the content. The server compares this with its own computed ETag to check for modifications.</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="xx-client-error">
+<h2>2.4&nbsp;&nbsp;&nbsp;4xx: Client Error</h2>
+<blockquote>
+<ul class="simple">
+<li>400 Bad Request: the request was malformed.</li>
+<li>401 Unauthorized: request requires authentication. The client can repeat the request with the Authorization header. If the client already included the Authorization header, then the credentials were wrong.</li>
+<li>403 Forbidden: server has denied access to the resource.</li>
+<li>405 Method Not Allowed: invalid HTTP verb used in the request line, or the server does not support that verb.</li>
+<li>409 Conflict: the server could not complete the request because the client is trying to modify a resource that is newer than the client's timestamp. Conflicts arise mostly for PUT requests during collaborative edits on a resource.</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="xx-server-error">
+<h2>2.5&nbsp;&nbsp;&nbsp;5xx: Server Error</h2>
+<blockquote>
+<ul class="simple">
+<li>501 Not Implemented: the server does not yet support the requested functionality.</li>
+<li>503 Service Unavailable: this could happen if an internal system on the server has failed or the server is overloaded. Typically, the server won't even respond and the request will timeout.</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div class="section" id="id5">
+<h1>3&nbsp;&nbsp;&nbsp;انواع سرآیندها</h1>
+<div class="section" id="general-headers">
+<h2>3.1&nbsp;&nbsp;&nbsp;General Headers</h2>
+<blockquote>
+<ul class="simple">
+<li>Via header is used in a TRACE message and updated by all intermittent proxies and gateways</li>
+<li>Pragma is considered a custom header and may be used to include implementation-specific headers. The most commonly used pragma-directive is Pragma: no-cache, which really is Cache-Control: no-cache under HTTP/1.1. This will be covered in Part 2 of the article.</li>
+<li>The Date header field is used to timestamp the request/response message</li>
+<li>Upgrade is used to switch protocols and allow a smooth transition to a newer protocol.</li>
+<li>Transfer-Encoding is generally used to break the response into smaller parts with the Transfer-Encoding: chunked value. This is a new header in HTTP/1.1 and allows for streaming of response to the client instead of one big payload.</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="entity-headers">
+<h2>3.2&nbsp;&nbsp;&nbsp;Entity headers</h2>
+<blockquote>
+<ul class="simple">
+<li>Allow</li>
+<li>Content-Encoding</li>
+<li>Content-Language</li>
+<li>Content-Length</li>
+<li>Content-Location</li>
+<li>Content-MD5</li>
+<li>Content-Range</li>
+<li>Content-Type</li>
+<li>Expires</li>
+<li>Last-Modified</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="request-format">
+<h2>3.3&nbsp;&nbsp;&nbsp;Request Format</h2>
+</div>
+<div class="section" id="address-binding-loader">
+<h2>3.4&nbsp;&nbsp;&nbsp;address binding, loader</h2>
+<img alt="img/http_get_header.png" class="align-center" src="img/http_get_header.png" />
+</div>
+<div class="section" id="address-binding-linker">
+<h2>3.5&nbsp;&nbsp;&nbsp;address binding, linker</h2>
+<img alt="img/http_get_timing.png" class="align-center" src="img/http_get_timing.png" />
+</div>
+</div>
+<div class="section" id="https">
+<h1>4&nbsp;&nbsp;&nbsp;https</h1>
+<p><a class="reference external" href="https://www.digitalocean.com/community/tutorials/http-1-1-vs-http-2-what-s-the-difference?utm_medium=email&amp;utm_source=IaaN&amp;utm_campaign=02142019">https://www.digitalocean.com/community/tutorials/http-1-1-vs-http-2-what-s-the-difference?utm_medium=email&amp;utm_source=IaaN&amp;utm_campaign=02142019</a>
+<a class="reference external" href="https://www.digitalocean.com/community/tutorials?utm_medium=email&amp;utm_source=IaaN&amp;utm_campaign=02142019">https://www.digitalocean.com/community/tutorials?utm_medium=email&amp;utm_source=IaaN&amp;utm_campaign=02142019</a></p>
+</div>
+<div class="section" id="javascript-differenct-hash-and-crypto-based-algorithms">
+<h1>5&nbsp;&nbsp;&nbsp;javascript differenct hash and crypto based algorithms</h1>
+<p><a class="reference external" href="https://gchq.github.io/CyberChef/">https://gchq.github.io/CyberChef/</a></p>
+<p><a class="reference external" href="https://onezero.medium.com/the-end-of-app-stores-is-rapidly-approaching-b972da395097?utm_medium=email&amp;utm_source=topic+optin&amp;utm_campaign=awareness&amp;utm_content=20190529+web+nl&amp;mkt_tok=eyJpIjoiWVdRMU1qTTVaR05oTURVMSIsInQiOiJsWVR2aWp3TnlXQk5yMEh1aVMyenFrR3NtaTRMVHRnWVNLSjdKYjRnYmgrRmZrWGU1TWI2Z0R4cldFWGxUVTF4ZTFPZkVna3ZMZDh4dnNzUnl3anFtUk1sS2FBM3YxVTJMWFZlSGhrcHRadm91RVRQTXQySm81M1hXc2JoTlVYQiJ9">https://onezero.medium.com/the-end-of-app-stores-is-rapidly-approaching-b972da395097?utm_medium=email&amp;utm_source=topic+optin&amp;utm_campaign=awareness&amp;utm_content=20190529+web+nl&amp;mkt_tok=eyJpIjoiWVdRMU1qTTVaR05oTURVMSIsInQiOiJsWVR2aWp3TnlXQk5yMEh1aVMyenFrR3NtaTRMVHRnWVNLSjdKYjRnYmgrRmZrWGU1TWI2Z0R4cldFWGxUVTF4ZTFPZkVna3ZMZDh4dnNzUnl3anFtUk1sS2FBM3YxVTJMWFZlSGhrcHRadm91RVRQTXQySm81M1hXc2JoTlVYQiJ9</a></p>
+<!-- comments:
+
+rst2html.py http.rst http.html - -stylesheet=../../tools/farsi.css,html4css1.css
+
+https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1- -net-31177
+https://en.wikipedia.org/wiki/HTTP/2
+https://en.wikipedia.org/wiki/HTTPS
+https://en.wikipedia.org/wiki/List_of_HTTP_header_fields
+https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+https://en.wikipedia.org/wiki/Representational_state_transfer
+https://en.wikipedia.org/wiki/Roy_Fielding
+https://www.dartlang.org/tutorials/dart-vm/httpserver
+http://www.wpbeginner.com/wp-tutorials/how-to-add-ssl-and-https-in-wordpress/
+https://www.tutorialspoint.com/security_testing/https_protocol_basics.htm
+https://www.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html
+https://developer.mozilla.org/en-US/docs/Web/HTTP
+https://en.wikipedia.org/wiki/Basic_access_authentication
+https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+https protocol tutorial -->
+</div>
+</div>
+</body>
+</html>

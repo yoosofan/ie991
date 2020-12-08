@@ -1,0 +1,57 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: $bodyBg;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
+  max-width: 700px;
+}
+
+div {
+  padding: 20px; // 15px 25px;
+  font-size: 1.5rem;
+  border-radius: 10px;  
+  //overflow: hidden;
+  margin: 0;
+  min-height: 150px;  
+  font-size: 1.25rem;
+  line-height: 1.5;
+  letter-spacing: 3px;
+  //text-transform: uppercase;
+  font-weight: normal;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.green {
+  background-color: green;
+}
+
+.magenta {
+  background-color: magenta;
+}
+
+
+.parent {  
+  position: relative;  
+}
+
+.child {
+  position: absolute; 
+  top: 0px;
+  left: 0px;
+}
+
+.another {
+  position: relative;  
+  top: 50px;
+}

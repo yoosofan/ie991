@@ -1,0 +1,30 @@
+
+table {
+	text-align:center; 
+	border-width:2px; 
+	border-color:rgb(128,128,255);
+	border-right-color:rgb(0,0,100) ; 
+	border-bottom-color:rgb(0,0,100);
+	border-bottom-width:4px;
+	border-right-width:3px;
+	border-style:outset;
+	background-color:rgb(128,128,255);
+	color:rgb(60,0,0);
+}
+td {
+	border-width:2px; 
+	border-color:rgb(128,128,255); 
+	border-style:outset;
+	width:70px;
+	height:40px;
+}
+td.right_cell {
+	border-width:2px; 
+	border-color:rgb(128,128,255); 
+	border-right-color:rgb(0,0,100) ;
+	border-right-width:3px;
+}
+#bottom_cell {
+	border-bottom-color:rgb(0,0,100);
+	border-bottom-width:3px;
+}

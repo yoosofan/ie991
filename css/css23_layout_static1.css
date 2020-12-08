@@ -1,0 +1,36 @@
+div {
+  padding: 20px; // 15px 25px;
+  font-size: 1.5rem;
+  border-radius: 10px;  
+  overflow: hidden;
+  margin: 0;
+  min-height: 150px;  
+  font-size: 1.25rem;
+  line-height: 1.5;
+  letter-spacing: 3px;
+  //text-transform: uppercase;
+  font-weight: normal;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.green {
+  background-color: green;
+}
+
+.magenta {
+  background-color: magenta;
+}
+
+.first {  
+  // No position set, so it's static
+}
+
+.another {
+  // No position set, so it's static
+  top: 50px;
+}
+
+

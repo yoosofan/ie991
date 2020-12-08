@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
+<title>Web framework</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7952 2016-07-26 18:15:59Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="web-framework">
+<h1 class="title">Web framework</h1>
+
+<div class="section" id="description">
+<h1>1&nbsp;&nbsp;&nbsp;Description</h1>
+<p>A web framework (WF) or web application framework (WAF) is a software framework that is designed to support the development of web applications including web services, web resources, and web APIs. Web frameworks provide a standard way to build and deploy web applications on the World Wide Web. Web frameworks aim to automate the overhead associated with common activities performed in web development. For example, many web frameworks provide libraries for database access, templating frameworks, and session management, and they often promote code reuse.[1] Although they often target development of dynamic web sites, they are also applicable to static websites.[2]</p>
+</div>
+<div class="section" id="features">
+<h1>2&nbsp;&nbsp;&nbsp;Features</h1>
+<div class="section" id="web-template-system">
+<h2>2.1&nbsp;&nbsp;&nbsp;Web template system</h2>
+<p>A web template system in web publishing lets web designers and developers work with web templates to automatically generate custom web pages, such as the results from a search. This reuses static web page elements while defining dynamic elements based on web request parameters. Web templates support static content, providing basic structure and appearance. Developers can implement templates from content management systems, web application frameworks, and HTML editors.</p>
+<ul class="simple">
+<li>A template engine: the primary processing element of the system;[1]</li>
+<li>Content resource: any of various kinds of input data streams, such as from a relational database, XML files, LDAP directory, and other kinds of local or networked data;</li>
+<li>Template resource: web templates specified according to a template language;</li>
+</ul>
+<object class="align-center" data="img/web_framework/template_engine.svg" type="image/svg+xml">
+img/web_framework/template_engine.svg</object>
+<div class="section" id="applications">
+<h3>2.1.1&nbsp;&nbsp;&nbsp;Applications</h3>
+<p>Web developers can use templates from any individual or organization to set up a website. Once they purchase or download a template, they replace all generic information in the web template with their personal, organizational, or product information. Templates are commonly used to:</p>
+<ul class="simple">
+<li>Display personal information or daily activities as in a blog</li>
+<li>Sell products online</li>
+<li>Display information about a company or organization</li>
+<li>Display family history</li>
+<li>Display a gallery of photos</li>
+<li>Place music files such as MP3 files on-line for play through a web browser</li>
+<li>Place videos online for public viewing</li>
+<li>Set up a private login area online</li>
+</ul>
+</div>
+<div class="section" id="kinds-of-template-systems">
+<h3>2.1.2&nbsp;&nbsp;&nbsp;Kinds of template systems</h3>
+<p>A web browser and web server are a client–server architecture. Sites often also use a web cache to improve performance. Five templating system types are classified based on when they replace placeholders with real content and assemble pages.</p>
+<ul class="simple">
+<li>Server-side - run-time substitution happens on the web server</li>
+<li>Client-side - run-time substitution happens in the web browser</li>
+<li>Edge-side - run-time substitution happens on a proxy between web server and browser</li>
+<li>Outside server - static web pages are produced offline and uploaded to the web server; no run-time substitution</li>
+<li>Distributed - run-time substitution happens on multiple servers</li>
+</ul>
+<p>Template languages may be:</p>
+<ul class="simple">
+<li>Embedded or event-driven.</li>
+<li>Simple, iterable, programmable, or complex.</li>
+<li>Defined by a consortium, privately defined, or de facto defined by an open implementation. Ownership influences the stability and credibility of a specification. However, in most jurisdictions, language specification cannot be copyrighted, so control is seldom absolute.</li>
+</ul>
+</div>
+<div class="section" id="jinja2">
+<h3>2.1.3&nbsp;&nbsp;&nbsp;Jinja2</h3>
+<p>Jinja is a modern and designer-friendly templating language for Python, modelled after Django’s templates. It is fast, widely used and secure with the optional sandboxed template execution environment.</p>
+<p>Jinja is a fast, expressive, extensible templating engine. Special placeholders in the template allow writing code similar to Python syntax. Then the template is passed data to render the final document.</p>
+<p>It includes:</p>
+<ul class="simple">
+<li>Template inheritance and inclusion.</li>
+<li>Define and import macros within templates.</li>
+<li>HTML templates can use autoescaping to prevent XSS from untrusted user input.</li>
+<li>A sandboxed environment can safely render untrusted templates.</li>
+<li>AsyncIO support for generating templates and calling async functions.</li>
+<li>I18N support with Babel.</li>
+<li>Templates are compiled to optimized Python code just-in-time and cached, or can be compiled ahead-of-time.</li>
+<li>Exceptions point to the correct line in templates to make debugging easier.</li>
+<li>Extensible filters, tests, functions, and even syntax.</li>
+</ul>
+<p>Jinja's philosophy is that while application logic belongs in Python if possible, it shouldn't make the template designer's job difficult by restricting functionality too much.</p>
+<pre class="code html literal-block">
+<span class="comment preproc">&lt;!DOCTYPE html&gt;</span>
+<span class="punctuation">&lt;</span><span class="name tag">html</span><span class="punctuation">&gt;</span>
+        <span class="punctuation">&lt;</span><span class="name tag">head</span><span class="punctuation">&gt;</span>
+                <span class="punctuation">&lt;</span><span class="name tag">title</span><span class="punctuation">&gt;</span>{{ variable|escape }}<span class="punctuation">&lt;/</span><span class="name tag">title</span><span class="punctuation">&gt;</span>
+        <span class="punctuation">&lt;/</span><span class="name tag">head</span><span class="punctuation">&gt;</span>
+        <span class="punctuation">&lt;</span><span class="name tag">body</span><span class="punctuation">&gt;</span>
+        {%- for item in item_list %}
+                {{ item }}{% if not loop.last %},{% endif %}
+        {%- endfor %}
+        <span class="punctuation">&lt;/</span><span class="name tag">body</span><span class="punctuation">&gt;</span>
+<span class="punctuation">&lt;/</span><span class="name tag">html</span><span class="punctuation">&gt;</span>
+</pre>
+<p>templating code</p>
+<pre class="code python literal-block">
+<span class="keyword namespace">from</span> <span class="name namespace">jinja2</span> <span class="keyword namespace">import</span> <span class="name">Template</span>
+<span class="keyword">with</span> <span class="name builtin">open</span><span class="punctuation">(</span><span class="literal string single">'example.html.jinja'</span><span class="punctuation">)</span> <span class="keyword">as</span> <span class="name">f</span><span class="punctuation">:</span>
+                <span class="name">tmpl</span> <span class="operator">=</span> <span class="name">Template</span><span class="punctuation">(</span><span class="name">f</span><span class="operator">.</span><span class="name">read</span><span class="punctuation">())</span>
+<span class="keyword">print</span> <span class="name">tmpl</span><span class="operator">.</span><span class="name">render</span><span class="punctuation">(</span>
+                <span class="name">variable</span> <span class="operator">=</span> <span class="literal string single">'Value with &lt;unsafe&gt; data'</span><span class="punctuation">,</span>
+                <span class="name">item_list</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="literal number integer">1</span><span class="punctuation">,</span> <span class="literal number integer">2</span><span class="punctuation">,</span> <span class="literal number integer">3</span><span class="punctuation">,</span> <span class="literal number integer">4</span><span class="punctuation">,</span> <span class="literal number integer">5</span><span class="punctuation">,</span> <span class="literal number integer">6</span><span class="punctuation">]</span>
+<span class="punctuation">)</span>
+</pre>
+<p>This produces the HTML string:</p>
+<pre class="code html literal-block">
+<span class="comment preproc">&lt;!DOCTYPE html&gt;</span>
+<span class="punctuation">&lt;</span><span class="name tag">html</span><span class="punctuation">&gt;</span>
+        <span class="punctuation">&lt;</span><span class="name tag">head</span><span class="punctuation">&gt;</span>
+                <span class="punctuation">&lt;</span><span class="name tag">title</span><span class="punctuation">&gt;</span>Value with <span class="name entity">&amp;lt;</span>unsafe<span class="name entity">&amp;gt;</span> data<span class="punctuation">&lt;/</span><span class="name tag">title</span><span class="punctuation">&gt;</span>
+        <span class="punctuation">&lt;/</span><span class="name tag">head</span><span class="punctuation">&gt;</span>
+        <span class="punctuation">&lt;</span><span class="name tag">body</span><span class="punctuation">&gt;</span>
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+        <span class="punctuation">&lt;/</span><span class="name tag">body</span><span class="punctuation">&gt;</span>
+<span class="punctuation">&lt;/</span><span class="name tag">html</span><span class="punctuation">&gt;</span>
+</pre>
+<pre class="code html literal-block">
+{% extends &quot;base.html&quot; %}
+{% block title %}Members{% endblock %}
+{% block content %}
+        <span class="punctuation">&lt;</span><span class="name tag">ul</span><span class="punctuation">&gt;</span>
+        {% for user in users %}
+                <span class="punctuation">&lt;</span><span class="name tag">li</span><span class="punctuation">&gt;&lt;</span><span class="name tag">a</span> <span class="name attribute">href</span><span class="operator">=</span><span class="literal string">&quot;{{ user.url }}&quot;</span><span class="punctuation">&gt;</span>{{ user.username }}<span class="punctuation">&lt;/</span><span class="name tag">a</span><span class="punctuation">&gt;&lt;/</span><span class="name tag">li</span><span class="punctuation">&gt;</span>
+        {% endfor %}
+        <span class="punctuation">&lt;/</span><span class="name tag">ul</span><span class="punctuation">&gt;</span>
+{% endblock %}
+</pre>
+<div class="section" id="install">
+<h4>2.1.3.1&nbsp;&nbsp;&nbsp;install</h4>
+<pre class="code sh literal-block">
+pip install -U Jinja2
+pip3 install -U Jinja2
+</pre>
+</div>
+<div class="section" id="websites">
+<h4>2.1.3.2&nbsp;&nbsp;&nbsp;websites</h4>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/pallets/jinja">https://github.com/pallets/jinja</a></li>
+<li><a class="reference external" href="https://jinja.palletsprojects.com/en">https://jinja.palletsprojects.com/en</a></li>
+<li><a class="reference external" href="https://pypi.org/project/Jinja2/">https://pypi.org/project/Jinja2/</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="mustache-template-system">
+<h3>2.1.4&nbsp;&nbsp;&nbsp;Mustache (template system)</h3>
+<p>Mustache is described as a &quot;logic-less&quot; system because it lacks any explicit control flow statements, like if and else conditionals or for loops; however, both looping and conditional evaluation can be achieved using section tags processing lists and lambdas.</p>
+<p>It is named &quot;Mustache&quot; because of heavy use of braces, { }, that resemble a sideways moustache.</p>
+<p>Mustache inspired numerous JavaScript template libraries which forked from the original simplicity to add certain functionality or use.</p>
+<div class="section" id="install-mustache-js">
+<h4>2.1.4.1&nbsp;&nbsp;&nbsp;install (mustache.js)</h4>
+<pre class="code sh literal-block">
+npm install mustache --save
+</pre>
+</div>
+<div class="section" id="command-line-tool">
+<h4>2.1.4.2&nbsp;&nbsp;&nbsp;Command line tool</h4>
+<pre class="code sh literal-block">
+npm install -g mustache
+
+mustache dataView.json myTemplate.mustache &gt; output.html
+</pre>
+</div>
+<div class="section" id="samples">
+<h4>2.1.4.3&nbsp;&nbsp;&nbsp;samples</h4>
+<pre class="code javascript literal-block">
+<span class="keyword declaration">var</span> <span class="name other">view</span> <span class="operator">=</span> <span class="punctuation">{</span>
+        <span class="name other">title</span><span class="operator">:</span> <span class="literal string double">&quot;Joe&quot;</span><span class="punctuation">,</span>
+        <span class="name other">calc</span><span class="operator">:</span> <span class="keyword declaration">function</span> <span class="punctuation">()</span> <span class="punctuation">{</span>
+                <span class="keyword">return</span> <span class="literal number integer">2</span> <span class="operator">+</span> <span class="literal number integer">4</span><span class="punctuation">;</span>
+        <span class="punctuation">}</span>
+<span class="punctuation">};</span>
+
+<span class="keyword declaration">var</span> <span class="name other">output</span> <span class="operator">=</span> <span class="name other">Mustache</span><span class="punctuation">.</span><span class="name other">render</span><span class="punctuation">(</span><span class="literal string double">&quot;{{title}} spends {{calc}}&quot;</span><span class="punctuation">,</span> <span class="name other">view</span><span class="punctuation">);</span>
+</pre>
+<p>If you need a template for a dynamic part in a static website, you can consider including the template in the static HTML file to avoid loading templates separately. Here's a small example using jQuery:</p>
+<pre class="code html literal-block">
+<span class="comment preproc">&lt;!DOCTYPE HTML&gt;</span>
+<span class="punctuation">&lt;</span><span class="name tag">html</span><span class="punctuation">&gt;</span>
+<span class="punctuation">&lt;</span><span class="name tag">body</span> <span class="name attribute">onload</span><span class="operator">=</span><span class="literal string">&quot;loadUser()&quot;</span><span class="punctuation">&gt;</span>
+<span class="punctuation">&lt;</span><span class="name tag">div</span> <span class="name attribute">id</span><span class="operator">=</span><span class="literal string">&quot;target&quot;</span><span class="punctuation">&gt;</span>Loading...<span class="punctuation">&lt;/</span><span class="name tag">div</span><span class="punctuation">&gt;</span>
+<span class="punctuation">&lt;</span><span class="name tag">script</span> <span class="name attribute">id</span><span class="operator">=</span><span class="literal string">&quot;template&quot;</span> <span class="name attribute">type</span><span class="operator">=</span><span class="literal string">&quot;x-tmpl-mustache&quot;</span><span class="punctuation">&gt;</span>
+<span class="name other">Hello</span> <span class="punctuation">{{</span> <span class="name other">name</span> <span class="punctuation">}}</span><span class="operator">!</span>
+<span class="punctuation">&lt;/</span><span class="name tag">script</span><span class="punctuation">&gt;</span>
+<span class="punctuation">&lt;/</span><span class="name tag">body</span><span class="punctuation">&gt;</span>
+<span class="punctuation">&lt;/</span><span class="name tag">html</span><span class="punctuation">&gt;</span>
+</pre>
+<pre class="code javascript literal-block">
+<span class="keyword declaration">function</span> <span class="name other">loadUser</span><span class="punctuation">()</span> <span class="punctuation">{</span>
+        <span class="keyword declaration">var</span> <span class="name other">template</span> <span class="operator">=</span> <span class="name other">$</span><span class="punctuation">(</span><span class="literal string single">'#template'</span><span class="punctuation">).</span><span class="name other">html</span><span class="punctuation">();</span>
+        <span class="name other">Mustache</span><span class="punctuation">.</span><span class="name other">parse</span><span class="punctuation">(</span><span class="name other">template</span><span class="punctuation">);</span>   <span class="comment single">// optional, speeds up future uses
+</span>        <span class="keyword declaration">var</span> <span class="name other">rendered</span> <span class="operator">=</span> <span class="name other">Mustache</span><span class="punctuation">.</span><span class="name other">render</span><span class="punctuation">(</span><span class="name other">template</span><span class="punctuation">,</span> <span class="punctuation">{</span><span class="name other">name</span><span class="operator">:</span> <span class="literal string double">&quot;Luke&quot;</span><span class="punctuation">});</span>
+        <span class="name other">$</span><span class="punctuation">(</span><span class="literal string single">'#target'</span><span class="punctuation">).</span><span class="name other">html</span><span class="punctuation">(</span><span class="name other">rendered</span><span class="punctuation">);</span>
+<span class="punctuation">}</span>
+</pre>
+</div>
+<div class="section" id="view">
+<h4>2.1.4.4&nbsp;&nbsp;&nbsp;View:</h4>
+<pre class="code javascript literal-block">
+<span class="punctuation">{</span>
+        <span class="literal string double">&quot;stooges&quot;</span><span class="operator">:</span> <span class="punctuation">[</span>
+                <span class="punctuation">{</span> <span class="literal string double">&quot;name&quot;</span><span class="operator">:</span> <span class="literal string double">&quot;Moe&quot;</span> <span class="punctuation">},</span>
+                <span class="punctuation">{</span> <span class="literal string double">&quot;name&quot;</span><span class="operator">:</span> <span class="literal string double">&quot;Larry&quot;</span> <span class="punctuation">},</span>
+                <span class="punctuation">{</span> <span class="literal string double">&quot;name&quot;</span><span class="operator">:</span> <span class="literal string double">&quot;Curly&quot;</span> <span class="punctuation">}</span>
+        <span class="punctuation">]</span>
+<span class="punctuation">}</span>
+</pre>
+</div>
+<div class="section" id="template">
+<h4>2.1.4.5&nbsp;&nbsp;&nbsp;Template:</h4>
+<pre class="code html literal-block">
+{{#stooges}}
+<span class="punctuation">&lt;</span><span class="name tag">b</span><span class="punctuation">&gt;</span>{{name}}<span class="punctuation">&lt;/</span><span class="name tag">b</span><span class="punctuation">&gt;</span>
+{{/stooges}}
+</pre>
+</div>
+<div class="section" id="output">
+<h4>2.1.4.6&nbsp;&nbsp;&nbsp;Output:</h4>
+<pre class="code html literal-block">
+<span class="punctuation">&lt;</span><span class="name tag">b</span><span class="punctuation">&gt;</span>Moe<span class="punctuation">&lt;/</span><span class="name tag">b</span><span class="punctuation">&gt;</span>
+<span class="punctuation">&lt;</span><span class="name tag">b</span><span class="punctuation">&gt;</span>Larry<span class="punctuation">&lt;/</span><span class="name tag">b</span><span class="punctuation">&gt;</span>
+<span class="punctuation">&lt;</span><span class="name tag">b</span><span class="punctuation">&gt;</span>Curly<span class="punctuation">&lt;/</span><span class="name tag">b</span><span class="punctuation">&gt;</span>
+</pre>
+</div>
+<div class="section" id="id1">
+<h4>2.1.4.7&nbsp;&nbsp;&nbsp;View:</h4>
+<pre class="code javascript literal-block">
+<span class="punctuation">{</span>
+        <span class="literal string double">&quot;musketeers&quot;</span><span class="operator">:</span> <span class="punctuation">[</span><span class="literal string double">&quot;Athos&quot;</span><span class="punctuation">,</span> <span class="literal string double">&quot;Aramis&quot;</span><span class="punctuation">,</span> <span class="literal string double">&quot;Porthos&quot;</span><span class="punctuation">,</span> <span class="literal string double">&quot;D'Artagnan&quot;</span><span class="punctuation">]</span>
+<span class="punctuation">}</span>
+</pre>
+</div>
+<div class="section" id="id2">
+<h4>2.1.4.8&nbsp;&nbsp;&nbsp;Template:</h4>
+<pre class="code html literal-block">
+{{#musketeers}}
+* {{.}}
+{{/musketeers}}
+</pre>
+</div>
+<div class="section" id="id3">
+<h4>2.1.4.9&nbsp;&nbsp;&nbsp;Output:</h4>
+<ul class="simple">
+<li>Athos</li>
+<li>Aramis</li>
+<li>Porthos</li>
+<li>D'Artagnan</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h4>2.1.4.10&nbsp;&nbsp;&nbsp;View:</h4>
+<pre class="code javascript literal-block">
+<span class="punctuation">{</span>
+        <span class="literal string double">&quot;beatles&quot;</span><span class="operator">:</span> <span class="punctuation">[</span>
+                <span class="punctuation">{</span> <span class="literal string double">&quot;firstName&quot;</span><span class="operator">:</span> <span class="literal string double">&quot;John&quot;</span><span class="punctuation">,</span> <span class="literal string double">&quot;lastName&quot;</span><span class="operator">:</span> <span class="literal string double">&quot;Lennon&quot;</span> <span class="punctuation">},</span>
+                <span class="punctuation">{</span> <span class="literal string double">&quot;firstName&quot;</span><span class="operator">:</span> <span class="literal string double">&quot;Paul&quot;</span><span class="punctuation">,</span> <span class="literal string double">&quot;lastName&quot;</span><span class="operator">:</span> <span class="literal string double">&quot;McCartney&quot;</span> <span class="punctuation">},</span>
+                <span class="punctuation">{</span> <span class="literal string double">&quot;firstName&quot;</span><span class="operator">:</span> <span class="literal string double">&quot;George&quot;</span><span class="punctuation">,</span> <span class="literal string double">&quot;lastName&quot;</span><span class="operator">:</span> <span class="literal string double">&quot;Harrison&quot;</span> <span class="punctuation">},</span>
+                <span class="punctuation">{</span> <span class="literal string double">&quot;firstName&quot;</span><span class="operator">:</span> <span class="literal string double">&quot;Ringo&quot;</span><span class="punctuation">,</span> <span class="literal string double">&quot;lastName&quot;</span><span class="operator">:</span> <span class="literal string double">&quot;Starr&quot;</span> <span class="punctuation">}</span>
+        <span class="punctuation">],</span>
+        <span class="literal string double">&quot;name&quot;</span><span class="operator">:</span> <span class="keyword declaration">function</span> <span class="punctuation">()</span> <span class="punctuation">{</span>
+                <span class="keyword">return</span> <span class="keyword">this</span><span class="punctuation">.</span><span class="name other">firstName</span> <span class="operator">+</span> <span class="literal string double">&quot; &quot;</span> <span class="operator">+</span> <span class="keyword">this</span><span class="punctuation">.</span><span class="name other">lastName</span><span class="punctuation">;</span>
+        <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+</pre>
+</div>
+<div class="section" id="id5">
+<h4>2.1.4.11&nbsp;&nbsp;&nbsp;Template:</h4>
+<pre class="code javascript literal-block">
+<span class="punctuation">{{</span><span class="error">#</span><span class="name other">beatles</span><span class="punctuation">}}</span>
+<span class="operator">*</span> <span class="punctuation">{{</span><span class="name other">name</span><span class="punctuation">}}</span>
+<span class="punctuation">{{</span><span class="error">/beatles}}</span>
+</pre>
+</div>
+<div class="section" id="id6">
+<h4>2.1.4.12&nbsp;&nbsp;&nbsp;Output:</h4>
+<pre class="code html literal-block">
+* John Lennon
+* Paul McCartney
+* George Harrison
+* Ringo Starr
+</pre>
+</div>
+<div class="section" id="id7">
+<h4>2.1.4.13&nbsp;&nbsp;&nbsp;websites</h4>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Mustache_(template_system">https://en.wikipedia.org/wiki/Mustache_(template_system</a>)</li>
+<li><a class="reference external" href="https://github.com/Mustache/Mustache">https://github.com/Mustache/Mustache</a></li>
+<li><a class="reference external" href="http://mustache.github.io/">http://mustache.github.io/</a></li>
+<li><a class="reference external" href="https://github.com/janl/mustache.js">https://github.com/janl/mustache.js</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="caching">
+<h2>2.2&nbsp;&nbsp;&nbsp;Caching</h2>
+<p>Web caching is the caching of web documents in order to reduce bandwidth usage, server load, and perceived &quot;lag&quot;. A web cache stores copies of documents passing through it; subsequent requests may be satisfied from the cache if certain conditions are met. Some application frameworks provide mechanisms for caching documents and bypassing various stages of the page's preparation, such as database access or template interpretation.</p>
+</div>
+<div class="section" id="security">
+<h2>2.3&nbsp;&nbsp;&nbsp;Security</h2>
+<p>Web application security is a branch of information security that deals specifically with security of websites, web applications and web services. At a high level, web application security draws on the principles of application security but applies them specifically to internet and web systems.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>37%</td>
+<td>Cross-site scripting</td>
+</tr>
+<tr><td>16%</td>
+<td>SQL injection</td>
+</tr>
+<tr><td>5%</td>
+<td>Path disclosure</td>
+</tr>
+<tr><td>5%</td>
+<td>Denial-of-service attack</td>
+</tr>
+<tr><td>4%</td>
+<td>Arbitrary code execution</td>
+</tr>
+<tr><td>4%</td>
+<td>Memory corruption</td>
+</tr>
+<tr><td>4%</td>
+<td>Cross-site request forgery</td>
+</tr>
+<tr><td>3%</td>
+<td>Data breach (information disclosure)</td>
+</tr>
+<tr><td>3%</td>
+<td>Arbitrary file inclusion</td>
+</tr>
+<tr><td>2%</td>
+<td>Local file inclusion</td>
+</tr>
+<tr><td>1%</td>
+<td>Remote file inclusion</td>
+</tr>
+<tr><td>1%</td>
+<td>Buffer overflow</td>
+</tr>
+<tr><td>15%</td>
+<td>Other, including code injection (PHP/JavaScript), etc.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="database-access-mapping-and-configuration">
+<h2>2.4&nbsp;&nbsp;&nbsp;Database access, mapping and configuration</h2>
+<p>Many web frameworks create a unified API to a database backend, enabling web applications to work with a variety of databases with no code changes, and allowing programmers to work with higher-level concepts. Additionally, some object-oriented frameworks contain mapping tools to provide object-relational mapping, which maps objects to tuples.</p>
+<p>Some frameworks minimize web application configuration through the use of introspection and/or following well-known conventions. For example, many Java frameworks use Hibernate as a persistence layer, which can generate a database schema at runtime capable of persisting the necessary information. This allows the application designer to design business objects without needing to explicitly define a database schema. Frameworks such as Ruby on Rails can also work in reverse, that is, define properties of model objects at runtime based on a database schema.</p>
+</div>
+<div class="section" id="url-mapping">
+<h2>2.5&nbsp;&nbsp;&nbsp;URL mapping</h2>
+<p>A framework's URL mapping or routing facility is the mechanism by which the framework interprets URLs. Some frameworks, such as Drupal and Django, match the provided URL against pre-determined patterns using regular expressions, while some others use rewriting techniques to translate the provided URL into one that the underlying engine will recognize. Another technique is that of graph traversal such as used by Zope, where a URL is decomposed in steps that traverse an object graph (of models and views).[citation needed]</p>
+<p>A URL mapping system that uses pattern matching or rewriting to route and handle requests allows for shorter more &quot;friendly URLs&quot; to be used, increasing the simplicity of the site and allowing for better indexing by search engines. For example, a URL that ends with &quot;/page.cgi?cat=science&amp;topic=physics&quot; could be changed to simply &quot;/page/science/physics&quot;. This makes the URL easier for people to remember, read and write, and provides search engines with better information about the structural layout of the site. A graph traversal approach also tends to result in the creation of friendly URLs. A shorter URL such as &quot;/page/science&quot; tends to exist by default as that is simply a shorter form of the longer traversal to &quot;/page/science/physics</p>
+</div>
+<div class="section" id="ajax">
+<h2>2.6&nbsp;&nbsp;&nbsp;AJAX</h2>
+<p>Ajax, shorthand for &quot;Asynchronous JavaScript and XML&quot;, is a web development technique for creating web applications. The intent is to make web pages feel more responsive by exchanging small amounts of data with the server behind the scenes, so that the entire web page does not have to be reloaded each time the user requests a change. This is intended to increase a web page's interactivity, speed, and usability.[citation needed]</p>
+<p>Due to the complexity of Ajax programming in JavaScript, there are numerous Ajax frameworks that exclusively deal with Ajax support. Some Ajax frameworks are even embedded as a part of larger frameworks. For example, the jQuery JavaScript library is included in Ruby on Rails.[citation needed]</p>
+<p>With the increased interest in developing &quot;Web 2.0&quot; rich media applications, the complexity of programming directly in Ajax and JavaScript has become so apparent that compiler technology has stepped in, to allow developers to code in high-level languages such as Java, Python and Ruby. The first of these compilers was Morfik followed by Google Web Toolkit, with ports to Python and Ruby in the form of Pyjs and RubyJS following some time after. These compilers and their associated widget set libraries make the development of rich media Ajax applications much more akin to that of developing desktop applications.</p>
+</div>
+</div>
+<div class="section" id="some-famous-web-frameworks">
+<h1>3&nbsp;&nbsp;&nbsp;Some famous web frameworks</h1>
+<div class="section" id="bootstrap">
+<h2>3.1&nbsp;&nbsp;&nbsp;Bootstrap</h2>
+<p>Build responsive, mobile-first projects on the web with the world’s most popular front-end component library.</p>
+<p>Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.</p>
+<p><a class="reference external" href="https://getbootstrap.com/">https://getbootstrap.com/</a></p>
+</div>
+<div class="section" id="angularjs">
+<h2>3.2&nbsp;&nbsp;&nbsp;AngularJS</h2>
+<p>AngularJS is a JavaScript-based open-source front-end web framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications. It aims to simplify both the development and the testing of such applications by providing a framework for client-side model–view–controller (MVC) and model–view–viewmodel (MVVM) architectures, along with components commonly used in rich Internet applications.</p>
+<p>AngularJS is the frontend part of the MEAN stack, consisting of MongoDB database, Express.js web application server framework, Angular.js itself, and Node.js server runtime environment.</p>
+<p><a class="reference external" href="https://angularjs.org/">https://angularjs.org/</a></p>
+<p><a class="reference external" href="https://angular.io/">https://angular.io/</a></p>
+<p><a class="reference external" href="https://github.com/angular/angular">https://github.com/angular/angular</a></p>
+</div>
+<div class="section" id="ember-js">
+<h2>3.3&nbsp;&nbsp;&nbsp;Ember.js</h2>
+<p>Ember.js is an open-source JavaScript web framework, based on the Model–view–viewmodel (MVVM) pattern. It allows developers to create scalable single-page web applications[3] by incorporating common idioms and best practices into the framework.</p>
+<p>Ember is used on many popular websites, including Apple Music[4] Square, Inc.[5] Discourse,[6] Groupon,[7] LinkedIn, Vine, Live Nation, Nordstrom, Twitch.tv, and Chipotle.[8] Although primarily considered a framework for the web, it is also possible to build desktop and mobile applications in Ember.[9][10][11] The most notable example of an Ember desktop application is Apple Music,[12] a feature of the iTunes desktop application. The Ember trademark is owned by Tilde Inc.</p>
+<p><a class="reference external" href="https://emberjs.com/">https://emberjs.com/</a></p>
+</div>
+<div class="section" id="vue-js">
+<h2>3.4&nbsp;&nbsp;&nbsp;Vue.js</h2>
+<p>Vue.js features an incrementally adoptable architecture that focuses on declarative rendering and component composition. Advanced features required for complex applications such as routing, state management and build tooling are offered via officially maintained supporting libraries and packages[12], with Nuxt.js as one of the most popular solutions</p>
+<p><a class="reference external" href="https://vuejs.org/">https://vuejs.org/</a></p>
+</div>
+<div class="section" id="reactjs">
+<h2>3.5&nbsp;&nbsp;&nbsp;ReactJS</h2>
+<p>React can be used as a base in the development of single-page or mobile applications, as it is optimal for fetching rapidly changing data that needs to be recorded. However, fetching data is only the beginning of what happens on a web page, which is why complex React applications usually require the use of additional libraries for state management, routing, and interaction with an API:[7][8] Redux[9], React Router[10] and axios[11] are examples of such libraries.</p>
+<p><a class="reference external" href="http://reactjs.org/">http://reactjs.org/</a></p>
+<div class="section" id="the-react-cheatsheet-for-2020-real-world-examples">
+<h3>3.5.1&nbsp;&nbsp;&nbsp;The React Cheatsheet for 2020 📄‬ (+ real-world examples)</h3>
+<p><a class="reference external" href="https://dev.to/codeartistryio/the-react-cheatsheet-for-2020-real-world-examples-4hgg?utm_medium=email&amp;utm_source=topic+optin&amp;utm_campaign=awareness&amp;utm_content=20200129+web+nl&amp;mkt_tok=eyJpIjoiWlRNd01qZGxOR1l6WXpJMCIsInQiOiJTRlwvSk1yUmxmUWFmZ3ZvaVFaZEtidzFzOXRaYUZRWnJTbk9aQm9aY1gwY1RUK2N0WUV1eWRqTytFRm8xMmxCQVVUdDIxTURFcHBldGhqb010UlpaUGxiR0pvYWNaNXJRWWMxNWpzdXByVnJaQ0JqNjlJK2FXYjhcL1JBSjAxd0RhIn0%3D">https://dev.to/codeartistryio/the-react-cheatsheet-for-2020-real-world-examples-4hgg?utm_medium=email&amp;utm_source=topic+optin&amp;utm_campaign=awareness&amp;utm_content=20200129+web+nl&amp;mkt_tok=eyJpIjoiWlRNd01qZGxOR1l6WXpJMCIsInQiOiJTRlwvSk1yUmxmUWFmZ3ZvaVFaZEtidzFzOXRaYUZRWnJTbk9aQm9aY1gwY1RUK2N0WUV1eWRqTytFRm8xMmxCQVVUdDIxTURFcHBldGhqb010UlpaUGxiR0pvYWNaNXJRWWMxNWpzdXByVnJaQ0JqNjlJK2FXYjhcL1JBSjAxd0RhIn0%3D</a></p>
+</div>
+</div>
+<div class="section" id="ext-js">
+<h2>3.6&nbsp;&nbsp;&nbsp;Ext JS</h2>
+<p>Ext JS is a pure JavaScript application framework for building interactive cross platform web applications[1] using techniques such as Ajax, DHTML and DOM scripting. It can be used as a simple component framework (to e.g. create dynamic grids on otherwise static pages), but also as a full framework for building single-page applications.</p>
+<p>Originally built as an add-on library extension[2] of YUI by Jack Slocum on April 15, 2007[3], beginning with version 1.1, Ext JS retains no dependencies on external libraries, instead making their use optional.[4] Nowadays Ext JS can be used both as a single script (with all classes and components in one file) or by building the application with Sencha Cmd.</p>
+<p><a class="reference external" href="https://www.sencha.com/products/extjs/">https://www.sencha.com/products/extjs/</a></p>
+</div>
+<div class="section" id="laravel">
+<h2>3.7&nbsp;&nbsp;&nbsp;Laravel</h2>
+<p>Laravel is a Model-View-Controller framework that uses PHP, which is one of the most popular languages of the web. It’s relatively young compared to other frameworks on this list.</p>
+<p>Laravel comes with API support out of the box, and it also possesses a decent amount of packages that could extend its reach. Laracasts is a screencasts tutorials website with over a thousand videos on PHP, Laravel, and frontend technologies in the Laravel ecosystem that could be considered to be a beginner’s heaven. In terms of performance, however, Laravel doesn’t compare to Django or Express, which might be a drawback for massive projects.</p>
+<p>Laravel is a framework created by Taylor Otwell in 2011 and like all other modern frameworks, it also follows the MVC architectural pattern. Laravel values Elegance, Simplicity, and Readability. One can rightaway start learning and developing Laravel with Laracasts which has hundreds of tutorials in it.</p>
+<p>Language : PHP</p>
+<p>Framework Link: <a class="reference external" href="https://laravel.com/">https://laravel.com/</a></p>
+<p>Github Link : <a class="reference external" href="https://github.com/laravel/laravel">https://github.com/laravel/laravel</a></p>
+<p>Websites using Laravel : Deltanet Travel , Neighbourhood Lender</p>
+</div>
+<div class="section" id="symfony">
+<h2>3.8&nbsp;&nbsp;&nbsp;Symfony</h2>
+<p>Symphony is a well-known framework among the community of PHP developers. It significantly reduces the time required for the creation of complicated PHP-based web apps.</p>
+<p>Here are some of its major features. Symfony framework is appreciated for its stability, high speed, flexibility, and a possibility for code reuse. Also, when it comes to creating high-performing apps, it offers a very convenient event dispatcher together with dependency injection, and possibilities for code optimization. In addition, it consumes a comparatively little amount of memory. However, Symfony is a bit slow for real-time apps.</p>
+<p>Symfony is one of the most trustworthy and most popular web frameworks and has more than 9000 live websites using this technology.</p>
+<p>Symfony is a set of reusable PHP components</p>
+<p>The standard foundation on which the best PHP applications are built. Choose any of the 50 stand-alone components available for your own applications.</p>
+<p><a class="reference external" href="https://symfony.com/">https://symfony.com/</a></p>
+</div>
+<div class="section" id="zend-framework-3">
+<h2>3.9&nbsp;&nbsp;&nbsp;Zend Framework 3</h2>
+<p>Zend Framework is a collection of 60+ packages for professional PHP development. Each package is available on GitHub and can be installed via Composer.</p>
+<p>Zend Framework is a collection of professional PHP packages with more than 480 million installations. It can be used to develop web applications and services using PHP 5.6+, and provides 100% object-oriented code using a broad spectrum of language features.</p>
+<p>Zend Framework uses Composer as a package dependency manager; PHPUnit to test all packages; and Travis CI as a Continuous Integration service. Zend Framework also follows PHP-FIG standards, and includes an implementation of PSR-7 for HTTP message interfaces (as shepherded by Matthew Weier O'Phinney, Zend Framework project lead).</p>
+<p>Zend Framework 3 evolved from both Zend Framework 2 and 1; cumulatively, the previous versions were downloaded more than 15 million times.</p>
+<p>The principal sponsor of Zend Framework is Zend, a Rogue Wave Company, but many others have contributed components or significant features to the framework. Companies such as Google, Microsoft, and StrikeIron have partnered with Zend to provide interfaces to web services and other technologies they wish to make available to ZF developers.</p>
+<p>Zend Framework 3 could not deliver and support all of these features without the help of the vibrant community. Community members, including contributors, make themselves available on mailing lists, IRC channels and other forums. Whatever question you have about Zend Framework, the community is always available to address it.</p>
+<p><a class="reference external" href="https://framework.zend.com/">https://framework.zend.com/</a></p>
+<p><a class="reference external" href="https://getlaminas.org/">https://getlaminas.org/</a></p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Zend_Framework">https://en.wikipedia.org/wiki/Zend_Framework</a></p>
+</div>
+<div class="section" id="flask-web-framework">
+<h2>3.10&nbsp;&nbsp;&nbsp;Flask (web framework)</h2>
+<p>Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries.[3] It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions. However, Flask supports extensions that can add application features as if they were implemented in Flask itself. Extensions exist for object-relational mappers, form validation, upload handling, various open authentication technologies and several common framework related tools. Extensions are updated far more frequently than the core Flask program.</p>
+<p>pip3 install flask</p>
+<p><a class="reference external" href="http://flask.pocoo.org">http://flask.pocoo.org</a></p>
+</div>
+<div class="section" id="tornado">
+<h2>3.11&nbsp;&nbsp;&nbsp;tornado</h2>
+<p>Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed. By using non-blocking network I/O, Tornado can scale to tens of thousands of open connections, making it ideal for long polling, WebSockets, and other applications that require a long-lived connection to each user.</p>
+<p><a class="reference external" href="http://www.tornadoweb.org/en/stable/">http://www.tornadoweb.org/en/stable/</a></p>
+</div>
+<div class="section" id="meteor">
+<h2>3.12&nbsp;&nbsp;&nbsp;METEOR</h2>
+<p>Meteor or MeteorJS is another framework which gives one a radically simpler way to build realtime mobile and web apps. It allows for rapid prototyping and produces cross-platform (Web, Android, iOS) code. Its cloud platform, Galaxy, greatly simplifies deployment, scaling, and monitoring.</p>
+<p>Language : JavaScript</p>
+<p><a class="reference external" href="https://www.meteor.com/">https://www.meteor.com/</a></p>
+<p><a class="reference external" href="https://github.com/meteor/meteor">https://github.com/meteor/meteor</a></p>
+<p>Websites using Meteor : HaggleMate ,  WishPool , Telescope</p>
+</div>
+<div class="section" id="asp-net-core">
+<h2>3.13&nbsp;&nbsp;&nbsp;ASP.NET Core</h2>
+<p>ASP.NET is a popular web-development framework for building web apps on the .NET platform.</p>
+<p>ASP.NET Core is the open-source version of ASP.NET, that runs on macOS, Linux, and Windows. ASP.NET Core was first released in 2016 and is a re-design of earlier Windows-only versions of ASP.NET.</p>
+<p><a class="reference external" href="https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core">https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core</a></p>
+<p><a class="reference external" href="https://www.asp.net/core/overview/aspnet-vnext">https://www.asp.net/core/overview/aspnet-vnext</a></p>
+<p>Django – Python
+Zend – PHP*
+Express.js – Javascript</p>
+</div>
+<div class="section" id="ruby-on-rails">
+<h2>3.14&nbsp;&nbsp;&nbsp;Ruby on Rails</h2>
+<p>Ruby on Rails is an extremely productive web application framework written by David Heinemeier Hansson. One can develop an application at least ten times faster with Rails than a typical Java framework. Moreover, Rails includes everything needed to create a database-driven web application, using the Model-View-Controller pattern.</p>
+<p><a class="reference external" href="http://rubyonrails.org/">http://rubyonrails.org/</a>
+<a class="reference external" href="https://github.com/rails/rails">https://github.com/rails/rails</a></p>
+</div>
+<div class="section" id="django">
+<h2>3.15&nbsp;&nbsp;&nbsp;Django</h2>
+<p>Django is another framework that helps in building quality web applications. It was invented to meet fast-moving newsroom deadlines, while satisfying the tough requirements of experienced Web developers. Django developers say the applications are it’s ridiculously fast, secure, scalable and versatile.</p>
+<p>Language : Python</p>
+<p><a class="reference external" href="https://www.djangoproject.com">https://www.djangoproject.com</a></p>
+</div>
+<div class="section" id="express-js">
+<h2>3.16&nbsp;&nbsp;&nbsp;Express.js</h2>
+<p>Express or Expressjs is a minimal and flexible framework that provides a robust set of features for web and mobile applications. It is relatively minimal meaning many features are available as plugins. Express facilitates rapid development of Node.js based Web applications. Express is also one major component of the MEAN software bundle.</p>
+<p>Language : JavaScript</p>
+<p><a class="reference external" href="http://expressjs.com/">http://expressjs.com/</a></p>
+<p><a class="reference external" href="https://github.com/strongloop/express">https://github.com/strongloop/express</a></p>
+<p>Websites using Express : Storify , Myspace , LearnBoost</p>
+</div>
+</div>
+<div class="section" id="static-site-generators">
+<h1>4&nbsp;&nbsp;&nbsp;Static site generators</h1>
+<div class="section" id="what-is-a-static-site">
+<h2>4.1&nbsp;&nbsp;&nbsp;What is a Static Site</h2>
+<p>A static website is made of pre-built pages with content that doesn’t change between user visits. Because each page is delivered to the browser the same way every time, static pages are often much faster than pages with dynamic content that rely on the server to process each request for each page load.</p>
+<p>A static site generator is an application that converts files (usually stored locally) into webpages. This allows content creators to focus on content, without needing to learn code or stylesheets, and without needing to manage many of the complexities of a backend server.</p>
+</div>
+<div class="section" id="why-choose-a-static-site-generator-over-a-cms">
+<h2>4.2&nbsp;&nbsp;&nbsp;Why Choose a Static Site Generator Over a CMS</h2>
+<p>Content Management Systems (CMS) make it easy to create and manage content through an interactive front-end. They rely on the server to retrieve data from a database with each visit. This allows pages to show dynamic content, but slows the delivery to the end-user, since each page is built as it’s requested. Because each page request is sent to the server, and because some major CMS features rely on plugins, system security may be compromised if precautions aren’t taken.</p>
+<p>A static site generator lets you create content offline in a text editor and preview what the final web page will look like before it is published. When it’s time to build the pages, a short command compiles all new and changed pages within seconds.</p>
+<p>While a static site generator doesn’t need a complex backend and database, it does generally require that the compiled files be moved to a server. This step can be automated, but might require using the command line to set up.</p>
+</div>
+<div class="section" id="when-to-use-a-static-site-generator">
+<h2>4.3&nbsp;&nbsp;&nbsp;When to Use a Static Site Generator</h2>
+<p>Many static site generators have pre-built themes for easy blogging. This allows bloggers to write in a distraction-free environment, while still having the option to format text using Markdown.</p>
+<p>Static sites can also be used for documentation. For example, Linode’s documentation library is built using Hugo. Check out the source Markdown file for this guide on GitHub to see what it looks like before Hugo applies our custom theme.</p>
+<p>Personal or event websites (portfolios, wedding sites, and campaign pages) are also easy to set up using a static site generator.</p>
+<p>Many websites are built using static site generators, including this list of Jekyll sites, these Hugo examples, and the Gatsby site showcase.</p>
+<p>A common CMS (Content Management System), like WordPress for instance, builds the web page dynamically as it is being requested by the client: it assembles all the data from the database, and processes the content through a template engine.</p>
+<p>On the other hand, a static site generator:</p>
+<p>takes a different approach and generates all the pages of the website once when there’s actually changes to the site. This means there’s no moving parts in the deployed website. Caching gets much easier, performance goes up and static sites are far more secure.</p>
+</div>
+<div class="section" id="compare-features">
+<h2>4.4&nbsp;&nbsp;&nbsp;Compare Features</h2>
+<p>StaticGen has an updated list of static site generators. To find the right one for you, consider the following:</p>
+<ul class="simple">
+<li>Tools you build with - Node / Ruby / Python / Git / Markdown / etc.</li>
+<li>Themes - have you found a theme you’ve fallen in love with?</li>
+<li>Plugins - will you be able to connect it to that thing you need?</li>
+<li>Language - is the generator available in your language?</li>
+<li>Project activity - is the generator still in active development?</li>
+</ul>
+<p>Since static site generators are easy to set up, it’s worth installing a few and creating test pages to see which works best for your workflow.</p>
+</div>
+<div class="section" id="document-markup-languages">
+<h2>4.5&nbsp;&nbsp;&nbsp;document-markup languages</h2>
+<ul class="simple">
+<li>DocBook</li>
+<li>html</li>
+<li>xhtml</li>
+<li>markdown</li>
+<li>Office Open XML (OOXML)</li>
+<li>reStructuredText</li>
+<li>Rich Text Format (RTF)</li>
+<li>Tex</li>
+<li>Texinfo</li>
+</ul>
+</div>
+<div class="section" id="hugo">
+<h2>4.6&nbsp;&nbsp;&nbsp;Hugo</h2>
+<p>Hugo is a very popular static site generator with over 32,000 stars on GitHub right now. It is written in Go, and advertises itself as being the fastest framework for building websites. In fact, Hugo comes with a fast build process, which makes building static websites a breeze and works great for blogs with lots of posts.</p>
+<p>The docs are great and the Hugo website offers a fantastic quickstart guide that gets you up and running with the software in no time.</p>
+<p>Here are some of Hugo’s best features:</p>
+<ul class="simple">
+<li>Designed and optimized for speed: as a rule of thumb, each piece of content renders in about 1 millisecond</li>
+<li>No need to install extra plugins for things like pagination, redirection, multiple content types, and more</li>
+<li>Rich theming system</li>
+<li>Shortcodes available as an alternative to using Markdown</li>
+<li>Since July 2018, Hugo offers a powerful assets pipeline, Hugo Pipes.</li>
+</ul>
+<p><a class="reference external" href="https://gohugo.io/">https://gohugo.io/</a></p>
+</div>
+<div class="section" id="jekyll">
+<h2>4.7&nbsp;&nbsp;&nbsp;Jekyll</h2>
+<p>Jekyll is a simple, extendable, static site generator. You give it text written in your favorite markup language and it churns through layouts to create a static website. Throughout that process you can tweak how you want the site URLs to look, what data gets displayed in the layout, and more.</p>
+<p><a class="reference external" href="https://jekyllrb.com/">https://jekyllrb.com/</a></p>
+<p><a class="reference external" href="https://learn.cloudcannon.com/jekyll/why-use-a-static-site-generator/">https://learn.cloudcannon.com/jekyll/why-use-a-static-site-generator/</a></p>
+<p><a class="reference external" href="https://snipcart.com/blog/choose-best-static-site-generator">https://snipcart.com/blog/choose-best-static-site-generator</a></p>
+</div>
+<div class="section" id="gitbook">
+<h2>4.8&nbsp;&nbsp;&nbsp;GitBook</h2>
+<p>Built around Git, GitBook aims to make many of the features that make Git useful (branches, pull requests, version tracking) accessible to users more familiar with traditional desktop publishing. GitBook is commonly used for technical/API documentation, user manuals, or knowledge bases, and has built-in templates for these and other types of content.</p>
+<p><a class="reference external" href="https://www.gitbook.com/">https://www.gitbook.com/</a></p>
+<p><a class="reference external" href="https://www.staticgen.com/">https://www.staticgen.com/</a></p>
+</div>
+<div class="section" id="nikola">
+<h2>4.9&nbsp;&nbsp;&nbsp;Nikola</h2>
+<p>pip3 install nikola</p>
+<p>pip3 install --user --upgrade &quot;Nikola[extras]&quot;</p>
+<p>pip3 install --user -e &quot;git+https://github.com/getnikola/nikola#egg=Nikolaextras&quot;</p>
+</div>
+</div>
+<div class="section" id="references">
+<h1>5&nbsp;&nbsp;&nbsp;References</h1>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Web_framework">https://en.wikipedia.org/wiki/Web_framework</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Web_template_system">https://en.wikipedia.org/wiki/Web_template_system</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Comparison_of_document-markup_languages">https://en.wikipedia.org/wiki/Comparison_of_document-markup_languages</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Comparison_of_web_frameworks">https://en.wikipedia.org/wiki/Comparison_of_web_frameworks</a></li>
+<li><a class="reference external" href="https://djangostars.com/blog/what-is-a-web-framework/">https://djangostars.com/blog/what-is-a-web-framework/</a></li>
+<li><a class="reference external" href="https://hackr.io/blog/top-10-web-development-frameworks-in-2019">https://hackr.io/blog/top-10-web-development-frameworks-in-2019</a></li>
+<li><a class="reference external" href="https://www.linode.com/docs/websites/static-sites/how-to-choose-static-site-generator/">https://www.linode.com/docs/websites/static-sites/how-to-choose-static-site-generator/</a></li>
+</ul>
+<!-- comments:
+
+rst2html.py web_development_framework.rst web_development_framework.html -->
+</div>
+</div>
+</body>
+</html>

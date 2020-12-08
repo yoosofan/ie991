@@ -1,0 +1,74 @@
+Return-Path: g.g.rbz.kk@gmail.com
+Received: from mailt.kashanu.ac.ir (LHLO mailt.kashanu.ac.ir) (172.16.3.38)
+ by mailt.kashanu.ac.ir with LMTP; Tue, 24 Dec 2019 12:53:20 +0330 (IRST)
+Received: from localhost (localhost [127.0.0.1])
+	by mailt.kashanu.ac.ir (Postfix) with ESMTP id 4ABFB31C1A5B;
+	Tue, 24 Dec 2019 12:53:20 +0330 (+0330)
+X-Virus-Scanned: amavisd-new at mailt.kashanu.ac.ir
+X-Spam-Flag: NO
+X-Spam-Score: -86.632
+X-Spam-Level:
+X-Spam-Status: No, score=-86.632 required=6.6 tests=[BAYES_99=3.5,
+	BAYES_999=0.2, DKIM_ADSP_CUSTOM_MED=0.001, DMARC_FAIL_NONE=1.2,
+	FORGED_MUA_OUTLOOK=1.927, FREEMAIL_FROM=0.001,
+	FREEMAIL_REPLYTO_END_DIGIT=0.25, MSOE_MID_WRONG_CASE=2.584,
+	NML_ADSP_CUSTOM_MED=0.9, RCVD_IN_BL_SPAMCOP_NET=1.347,
+	RDNS_NONE=0.793, SPF_SOFTFAIL=0.665, USER_IN_WHITELIST=-100]
+	autolearn=no autolearn_force=no
+Received: from mailt.kashanu.ac.ir ([127.0.0.1])
+	by localhost (mailt.kashanu.ac.ir [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id AgiTn91yEtJ8; Tue, 24 Dec 2019 12:53:19 +0330 (+0330)
+Received: from mg1.kashanu.ac.ir (unknown [172.16.3.43])
+	by mailt.kashanu.ac.ir (Postfix) with SMTP id 94F6531C1A5A;
+	Tue, 24 Dec 2019 12:53:19 +0330 (+0330)
+Received: from bulutlogistic.com (ssec0.bulutlogistic.com [185.243.114.10])
+	by mg1.kashanu.ac.ir (Postfix) with SMTP id BEECB4D6066;
+	Tue, 24 Dec 2019 12:54:52 +0330 (IRST)
+Received: from [192.168.0.100] (unknown [51.254.35.77])
+	(Authenticated sender: postmaster)
+	by bulutlogistic.com (Postfix) with ESMTPA id 4DAD4B059E;
+	Mon, 23 Dec 2019 21:45:23 -0600 (CST)
+Content-Type: text/plain; charset="iso-8859-1"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Description: Mail message body
+Subject: {Spam?} Re: contact me
+To: me <ggrbzkk@gmail.com>
+From: "Gary G" <g.g.rbz.kk@gmail.com>
+Date: Tue, 24 Dec 2019 04:45:12 +0100
+Reply-To: "Gary G"  <gxk14-b1@yahoo.com>
+X-Mailer: Microsoft Outlook Express 6.00.2800.1437
+X-KashanU-MailScanner-Information: Please contact the ISP for more information
+X-KashanU-MailScanner-ID: BEECB4D6066.AA6C4
+X-KashanU-MailScanner: Found to be clean
+X-KashanU-MailScanner-SpamCheck: spam, SpamAssassin (not cached, score=7.209,
+	required 6, BAYES_50 0.80, DKIM_ADSP_CUSTOM_MED 0.00,
+	FAKE_REPLY_C 1.49, FORGED_MUA_OUTLOOK 1.93, FREEMAIL_FROM 0.00,
+	FREEMAIL_REPLYTO_END_DIGIT 0.25, MISSING_MID 0.50,
+	NML_ADSP_CUSTOM_MED 0.90, RCVD_IN_BL_SPAMCOP_NET 1.35)
+X-KashanU-MailScanner-SpamScore: sssssss
+X-KashanU-MailScanner-From: g.g.rbz.kk@gmail.com
+Message-Id: <20191224092319.94F6531C1A5A@mailt.kashanu.ac.ir>
+
+Hi, I hope you recedived my previous message.
+
+Gary.
+
+
+----- Original Message -----
+From: "Gary G"
+To: "me"
+Date:Thu, 22 Dec 2019 17:20:07 -0400
+Subject:contact me
+
+Hello, I am interested in funding you for start up or expansion either by
+direct cash injection or a loan.
+
+Gary.
+
+
+--=20
+This message has been scanned for viruses and
+dangerous content by MailScanner, and is
+believed to be clean.
+
